@@ -27,7 +27,12 @@ function recharting() {
     function createChart() {
 
         $('#container').highcharts('StockChart', {
-
+            
+        title: {
+            text: 'Stock Chart',
+            align: 'center',
+            x: -10
+        },
             credits: {
                 enabled: false
             },
@@ -109,7 +114,12 @@ function addStockTab(callback) {
     function createChart() {
 
         $('#container').highcharts('StockChart', {
-
+            
+        title: {
+            text: 'Stock Chart',
+            align: 'center',
+            x: -10
+        },
             credits: {
                 enabled: false
             },
@@ -201,7 +211,12 @@ function charting(callback) {
     function createChart() {
 
         $('#container').highcharts('StockChart', {
-
+            
+        title: {
+            text: 'Stock Chart',
+            align: 'center',
+            x: -10
+        },
             credits: {
                 enabled: false
             },
@@ -293,7 +308,12 @@ function validateStockCode(callback) {
     function createChart() {
 
         $('#container').highcharts('StockChart', {
-
+            
+        title: {
+            text: 'Stock Chart',
+            align: 'center',
+            x: -10
+        },
             credits: {
                 enabled: false
             },
@@ -388,7 +408,12 @@ function addStockTabAndRecharting(result) {
         function createChart() {
 
             $('#container').highcharts('StockChart', {
-
+            
+        title: {
+            text: 'Stock Chart',
+            align: 'center',
+            x: -10
+        },
                 credits: {
                     enabled: false
                 },

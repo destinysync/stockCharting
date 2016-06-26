@@ -7,9 +7,11 @@ var User = require('../models/users');
 function ClickHandler() {
     
     this.getStocksFromDB = function(req, res) {
+console.log('sdf');
         User.find({},function(err, data) {
             if (err) throw err;
             var stockArray = data[0].stocks.stockArray;
+                    console.log('stockArray: ' + data);
             res.json(stockArray);
         })
     };
