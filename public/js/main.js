@@ -7,7 +7,8 @@ var stockDivPart2 = '</h3><button><h5 class="deleteButton">X</h5></button><h5 cl
 var stockDivPart3 = '</h5></div></div>';
 var inputStockCode = '';
 var stockInDB = [];
-var socketServer = 'http://localhost:7464';
+// var socketServer = 'http://localhost:7464';
+var socketServer = 'http://stock-charting.herokuapp.com/';
 var socket;
 
 function resetStockDivPart1(){
