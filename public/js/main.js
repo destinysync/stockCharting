@@ -3,7 +3,7 @@ var invalidStockCode = false;
 var stockTabs = '';
 var stockTabID = '';
 var stockDivPart1 = '<div class="col-lg-4" id="' + stockTabID +'"><div class="stockDiv"><h3 class="stockCode">';
-var stockDivPart2 = '</h3><button><h5 class="deleteButton">X</h5></button><h5 class="companyDes">';
+var stockDivPart2 = '</h3><button class="deleteButton"><h5>X</h5></button><h5 class="companyDes">';
 var stockDivPart3 = '</h5></div></div>';
 var inputStockCode = '';
 var stockInDB = [];
