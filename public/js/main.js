@@ -8,8 +8,8 @@ var stockDivPart3 = '</h5></div></div>';
 var inputStockCode = '';
 var stockInDB = [];
 // var socketServer = 'http://localhost:7464';
-var socketServer = 'http://stock-charting.herokuapp.com/';
-// var socketServer = 'https://stockcharting-destinysync.c9users.io/';
+// var socketServer = 'http://stock-charting.herokuapp.com/';
+var socketServer = 'https://stockcharting-destinysync.c9users.io/';
 var socket;
 
 function resetStockDivPart1() {
@@ -184,6 +184,8 @@ function addStockTab(callback) {
         $.getJSON('https://www.quandl.com/api/v3/datasets/WIKI/' + name.toLowerCase() + '.json?api_key=dC2jsWbBMyzEfk49T_Yd&order=asc&start_date=2013-06-10&column_index=4&collapse=daily', function(json) {
 
             stockTabID = name;
+            
+            resetStockDivPart1();
 
             var fullStockTab = stockDivPart1 + json.dataset.dataset_code + stockDivPart2 + json.dataset.name + stockDivPart3;
 
@@ -511,6 +513,9 @@ function addStockTabAndRecharting(result) {
             $.getJSON('https://www.quandl.com/api/v3/datasets/WIKI/' + name.toLowerCase() + '.json?api_key=dC2jsWbBMyzEfk49T_Yd&order=asc&start_date=2013-06-10&column_index=4&collapse=daily', function(json) {
 
                 stockTabID = name;
+                
+                resetStockDivPart1();
+                
                 var fullStockTab = stockDivPart1 + json.dataset.dataset_code + stockDivPart2 + json.dataset.name + stockDivPart3;
 
                 stockTabs += fullStockTab;
@@ -586,7 +591,6 @@ $(document).ready(function() {
             stockTabs = '';
             names = [data.inputStockCode];
             addStockTab(callback);
-
         }
 
         function b() {
