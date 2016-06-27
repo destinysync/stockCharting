@@ -32,12 +32,10 @@ io.on('connection', function(client) {
     console.log('Client connected...');
 
     client.on('addStockTabMsgToServer', function (data) {
-        console.log("addStockTabMsgToServer:   " + JSON.stringify(data));
         client.broadcast.emit('addStockTabMsgToClient', data);
     });
     
     client.on('stockTabRemovalMsgToServer', function (data) {
-        console.log("stockTabRemovalMsgToServer:   " + JSON.stringify(data));
         client.broadcast.emit('stockTabRemovalMsgToClient', data);
     });
     

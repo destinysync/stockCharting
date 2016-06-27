@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,26 +18,40 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body>
-<div class="container">
+    <div class="container">
 
-    <div class="col-lg-12">
-    <div id="container" style="height: 400px; min-width: 310px"></div>
+        <div class="col-lg-12">
+            <div id="container" style="height: 400px; min-width: 310px"></div>
+        </div>
+
+        <div id="stockTabsContainer">
+            <div id='addDiv' class="col-lg-4">
+                <div class="addDiv">
+                    <p><b>Syncs in realtime across clients</b></p>
+                    <div class="row">
+                        <div class="col-lg-11">
+                            <div class="input-group"><input type="text" id='stockCodeInputBox' class="form-control" placeholder="Stock Code ..."><span class="input-group-btn"><button class="btn btn-primary" type="button" onclick="addStock()">Add</button></span></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p id="invalidStockCode"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
-
-    <div id="stockTabsContainer">
-            <div id='addDiv' class="col-lg-4"><div class="addDiv"><p><b>Syncs in realtime across clients</b></p><div class="row"><div class="col-lg-11"><div class="input-group"><input type="text" id='stockCodeInputBox' class="form-control" placeholder="Stock Code ..."><span class="input-group-btn"><button class="btn btn-primary" type="button" onclick="addStock()">Add</button></span></div></div></div><div><p id="invalidStockCode"></p></div></div></div>
-    </div>
-
-
-</div>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<!--<script src="js/jquery-1.11.3.js"></script>-->
-<script src="js/jquery-1.11.3.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
-<script src="js/highstock.js"></script>
-<script src="js/main.js"></script>
-<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="js/jquery-1.11.3.js"></script>-->
+    <script src="js/jquery-1.11.3.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/highstock.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
 </body>
+
 </html>
