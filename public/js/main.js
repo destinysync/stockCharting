@@ -8,8 +8,8 @@ var stockDivPart3 = '</h5></div></div>';
 var inputStockCode = '';
 var stockInDB = [];
 // var socketServer = 'http://localhost:7464';
-// var socketServer = 'http://stock-charting.herokuapp.com/';
-var socketServer = 'https://stockcharting-destinysync.c9users.io/';
+var socketServer = 'http://stock-charting.herokuapp.com/';
+// var socketServer = 'https://stockcharting-destinysync.c9users.io/';
 var socket;
 
 function emptyStockChart() {
